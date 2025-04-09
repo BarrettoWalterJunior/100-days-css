@@ -9,7 +9,6 @@ Este repositorio contiene mi reto de **100 días de CSS**, enfocado en mejorar m
 | Día | Descripción | Link |
 |-----|-------------|------|
 | 01  | Hero section responsiva con botón y fondo | [Ver](./Dia%201%20-%20Hero%20Section/Dia1.html)|
-| 02  | Navbar con menú hamburguesa | [Ver](./dia-02) |
 | 03  | Footer con columnas y redes sociales | [Ver](./dia-03) |
 | 04  | Card de producto | [Ver](./dia-04) |
 | 05  | Sección de artículos | [Ver](./dia-05) |
