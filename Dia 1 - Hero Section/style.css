@@ -14,10 +14,10 @@ html{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body{
-    height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.1)) ,url('img/hero.jpg');
-    background-size: cover;
-    background-position: center;
+    height: 100vh; /*El body ocupa el 100% del viewport*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.1)) ,url('img/hero.jpg');  /*Linear gradient da un efecto de sombra y la url del fondo*/
+    background-size: cover; /*El fondo se ajusta al tamaño del body*/
+    background-position: center; /*El fondo se centra*/
 }
 li{
     list-style: none;
@@ -32,67 +32,67 @@ a:hover{
 }
 /*header*/
 header{
-    position: relative;
-    padding: 0 2rem;
+    position: relative; /*El header se posiciona en relación con su contenedor*/
+    padding: 0 2rem; /*Se agregan 2rem de padding a la izquierda y derecha*/
 }
 .navbar{
-    width: 100%;
-    height: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%; /*El navbar ocupa el 100% del ancho del header*/
+    height: 60px; /*El navbar tiene un alto de 60px*/
+    max-width: 1200px; /*El navbar no supera los 1200px*/
+    margin: 0 auto; /*El navbar se centra horizontalmente*/
     display: flex;
-    align-items: center;
-    justify-content: space-between ;
+    align-items: center; /*Los elementos verticales se alinean en el centro*/
+    justify-content: space-between ; /*Los elementos horizontales se distribuyen de manera que ocupen el espacio disponible*/
 }
 .navbar .logo a{
     font-size: 1.5rem;
     font-weight: bold;
 }
 .navbar .links{
-    display: flex;
-    gap: 30px;
+    display: flex; /*Los elementos se muestran en una sola línea*/
+    gap: 30px; 
 }
 .navbar .toggle_btn{
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;    
-    display: none;
+    display: none; /*Oculta el icono de la hamburguesa*/
 }
 .action-btn{
     background-color: orange;
     color: #fff;
     padding: 0.5rem 1rem;
-    border: none;
+    border: none;       /*No recomendado, utilizar :focus :active y efecto box shadow*/
     outline: none;
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /*Animación de transformación*/
 }
 .action-btn:hover{
-    transform: scale(1.05);
+    transform: scale(1.05); /*Aumenta el tamaño del botón al pasar el mouse*/
     color: #fff;
 }
 .action-btn:active{
-    transform: scale(0.95);
+    transform: scale(0.95); /*Reduce el tamaño del botón al hacer clic*/
 }
 /*dropdown menu*/
 .dropdown-menu{
-    display: none;
-    position: absolute;
-    right: 2rem;
-    top: 60px;
-    height: 0 ;
-    width: 300px;
-    background: rgba(255, 255, 255, 0.1 );
-    backdrop-filter: blur(15px);
+    display: none; /*Oculta el menú desplegable*/
+    position: absolute; /*El menú desplegable se posiciona en relación con su contenedor*/
+    right: 2rem; /*El menú desplegable se muestra a la derecha del botón que lo activa*/
+    top: 60px; /*El menú desplegable se muestra debajo del botón que lo activa*/
+    height: 0 ; /*El menú desplegable tiene un alto de 0*/
+    width: 300px; /*El menú desplegable tiene un ancho de 300px*/ 
+    background: rgba(255, 255, 255, 0.1 ); /*El menú desplegable tiene un fondo de color gris claro*/
+    backdrop-filter: blur(15px); /*Efecto difuminado*/
     border-radius: 10px;
     overflow: hidden;
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275 );
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275 ); /*Animación de altura*/
 }
 .dropdown-menu.open{
-    height: 240px;
+    height: 240px; /*El menú al dar click pasa de 0 a 240 de altura*/
 }
 .dropdown-menu li{
     padding: 0.7rem;
@@ -101,13 +101,13 @@ header{
     justify-content: center;
 }
 .dropdown-menu .action-btn{
-    width: 100%;
+    width: 100%; /*El botón se ajusta al ancho del menú*/
     display: flex;
     justify-content: center;
 }
 /*HERO*/
 section#hero{
-    height: calc(100vh - 60px);
+    height: calc(100vh - 60px); /*El alto del hero es igual al alto de la pantalla - 60px*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,21 +122,21 @@ section#hero{
 /*diseño responsivo*/
 @media (max-width: 992px) {
     .navbar .links,
-    .navbar .action-btn{
-        display: none;
+    .navbar .action-btn{ 
+        display: none; /*Al llegar a 992px ocultamos los links y el botón de acción*/
     }
     .navbar .toggle_btn{
-        display: block;
+        display: block; /*Al llegar a 992px mostramos el botón de menú*/
     } 
 
     .dropdown-menu{
-        display: block;
+        display: block; /*Al llegar a 992px mostramos el menú desplegable*/
     }
 }
 
 @media (max-width: 576px) {
 .dropdown-menu{
-    left: 2rem;
-    width: unset;
+    left: 2rem; /*Al llegar a 576px ajustamos el menú desplegable*/
+    width: unset; /*Al llegar a 576px el menú desplegable se ajusta a la pantalla*/
 }
 }
