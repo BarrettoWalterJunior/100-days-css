@@ -138,5 +138,5 @@ section#hero{
 .dropdown-menu{
     left: 2rem; /*Al llegar a 576px ajustamos el menú desplegable*/
     width: unset; /*Al llegar a 576px el menú desplegable se ajusta a la pantalla*/
-}
+ }
 }
